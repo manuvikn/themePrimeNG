@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { MenubarModule } from 'primeng/menubar';
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
+import {TableModule} from 'primeng/table';
+
 
 @NgModule({
     declarations: [],
@@ -10,12 +12,14 @@ import {ButtonModule} from 'primeng/button';
         CommonModule,
         MenubarModule,
         InputTextModule,
-        ButtonModule
+        ButtonModule,
+        TableModule
     ],
     exports: [
         MenubarModule,
         InputTextModule,
-        ButtonModule
+        ButtonModule,
+        TableModule
     ],
     providers: [],
 })
