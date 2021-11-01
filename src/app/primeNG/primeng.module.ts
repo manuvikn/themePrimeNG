@@ -4,6 +4,7 @@ import { MenubarModule } from 'primeng/menubar';
 import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import {TableModule} from 'primeng/table';
+import {CardModule} from 'primeng/card';
 
 
 @NgModule({
@@ -13,13 +14,15 @@ import {TableModule} from 'primeng/table';
         MenubarModule,
         InputTextModule,
         ButtonModule,
-        TableModule
+        TableModule,
+        CardModule
     ],
     exports: [
         MenubarModule,
         InputTextModule,
         ButtonModule,
-        TableModule
+        TableModule,
+        CardModule
     ],
     providers: [],
 })

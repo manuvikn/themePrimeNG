@@ -1,0 +1,26 @@
+<div>
+
+    <h1 class="p-text-center">Lista de usuarios</h1>
+
+    <hr>
+
+    <div class="p-d-flex p-flex-wrap p-jc-between p-mt-4 container">
+        <p-card *ngFor="let user of userList" header="{{ user.username }}" subheader="{{ user.name }}" [style]="{'width': '360px', 'margin-top': '2em'}" styleClass="p-card-shadow">
+            <ng-template pTemplate="header">
+                <img alt="Avatar" src="{{ user.avatar }}">
+            </ng-template>
+            <p>{{ user.email }}</p>
+            <p>{{ user.gender }}</p>
+            <p>{{ user.phone }}</p>
+            <ng-template pTemplate="footer">
+                <p-button label="Save" icon="pi pi-check" styleClass="p-button-info"></p-button>
+                <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{'margin-left': '.5em'}"></p-button>
+            </ng-template>
+        </p-card>
+
+
+
+    </div>
+
+
+</div>
