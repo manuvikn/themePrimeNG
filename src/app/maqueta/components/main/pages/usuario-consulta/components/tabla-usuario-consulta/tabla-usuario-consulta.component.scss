@@ -1,0 +1,18 @@
+:host ::ng-deep .p-datatable {
+    .p-datatable-thead > tr > th {
+        background-color: var(--indigo-300);
+        color: #ffff;
+        border-color: black;
+    }
+    .p-datatable-tbody > tr > td {
+        border-color: black;
+    }
+    .p-paginator-bottom {
+        color: black;
+        background-color: #ffffff;
+        border-color: black !important;
+    }
+    .p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+        background-color: var(--indigo-400);
+    }
+}

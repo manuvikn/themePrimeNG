@@ -16,10 +16,17 @@ export class UsersComponent implements OnInit {
 
     ngOnInit() {
 
-        this.usersService.getUsers()
-            .subscribe((data: Array<User>) => {
-                this.userList = data;
-            });
+        this.generarUsers();
+    }
 
+    deleteUser(i: number) {
+        this.userList.splice(i, 1);
+    }
+
+    generarUsers() {
+        this.usersService.getUsers()
+        .subscribe((data: Array<User>) => {
+            this.userList = data;
+        });
     }
 }

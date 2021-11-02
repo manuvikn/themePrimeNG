@@ -1,0 +1,19 @@
+<info-usuario-consulta></info-usuario-consulta>
+
+<div class="container">
+    <p-accordion id="accordion-usuario-consulta">
+        <p-accordionTab id="filtro-usuario-consulta" [selected]="true">
+            <ng-template pTemplate="header" [style]="{'background-color': 'white'}">
+                Filtros
+            </ng-template>
+            <filtro-usuario-consulta></filtro-usuario-consulta>
+            
+            <div class="p-d-flex p-jc-center p-mb-4">
+                <p-button label="Buscar" styleClass="p-button-info"></p-button>
+            </div>
+        </p-accordionTab>
+    </p-accordion>
+
+    <tabla-usuario-consulta></tabla-usuario-consulta>
+
+</div>

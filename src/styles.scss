@@ -10,3 +10,13 @@
 .p-component {
     background-color: var(--indigo-100);
 }
+
+#filtro-usuario-consulta .p-accordion-content {
+    background-color: var(--indigo-100) !important;
+    border-color: var(--indigo-100);
+}
+
+#accordion-usuario-consulta .p-accordion .p-accordion-header .p-accordion-header-link {
+    background-color: var(--indigo-300) !important;
+    border-color: black !important;
+}
