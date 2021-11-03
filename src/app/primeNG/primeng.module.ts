@@ -9,6 +9,10 @@ import {PanelModule} from 'primeng/panel'
 import {FieldsetModule} from 'primeng/fieldset';
 import {CheckboxModule} from 'primeng/checkbox';
 import {AccordionModule} from 'primeng/accordion';
+import {TreeModule} from 'primeng/tree';
+import {TabViewModule} from 'primeng/tabview';
+import {DropdownModule} from 'primeng/dropdown';
+import {ToastModule} from 'primeng/toast';
 
 @NgModule({
     declarations: [],
@@ -22,7 +26,11 @@ import {AccordionModule} from 'primeng/accordion';
         PanelModule,
         FieldsetModule,
         CheckboxModule,
-        AccordionModule
+        AccordionModule,
+        TreeModule,
+        TabViewModule,
+        DropdownModule,
+        ToastModule
     ],
     exports: [
         MenubarModule,
@@ -33,7 +41,11 @@ import {AccordionModule} from 'primeng/accordion';
         PanelModule,
         FieldsetModule,
         CheckboxModule,
-        AccordionModule
+        AccordionModule,
+        TreeModule,
+        TabViewModule,
+        DropdownModule,
+        ToastModule
     ],
     providers: [],
 })

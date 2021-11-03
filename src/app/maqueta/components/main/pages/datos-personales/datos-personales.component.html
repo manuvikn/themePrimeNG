@@ -1,0 +1,47 @@
+
+<div class="p-d-flex p-flex-wrap datosPerContainer">
+
+    <div class="avatarContainer">
+
+        <div class="imageContainer">
+            <img class="imageUser" [src]="usuario?.avatar" [alt]="usuario?.nombre">
+        </div>
+
+    </div>
+
+    <div class="mainTabsContainer">
+
+        <div class="menu-info">
+            
+            <div class="p-d-flex p-flex-wrap p-jc-between p-mb-1">
+
+                <span><strong>Nombre y apellidos:</strong> {{ usuario?.nombre + ' ' + usuario?.apellido1 + ' ' + usuario?.apellido2 }}</span>
+                <span><strong>DNI/NIE:</strong> {{ usuario?.dni }}</span>
+
+            </div>
+
+            <div class="p-d-flex  p-flex-wrap p-jc-between">
+
+                <span><strong>Identificador:</strong> {{ usuario?.identificador }}</span>
+                <span><strong>Departamento:</strong> {{ usuario?.departamento }}</span>
+                <span><strong>Fecha:</strong> {{today}}</span>
+
+            </div>
+
+        </div>
+
+        <p-tabView>
+            <p-tabPanel header="Datos personales" [selected]="true">
+               <tab-datos-personales></tab-datos-personales>
+            </p-tabPanel>
+            <p-tabPanel header="Datos del perfil">
+                Content 2
+            </p-tabPanel>
+            <p-tabPanel header="Datos recursos">
+                Content 3
+            </p-tabPanel>
+        </p-tabView>
+
+    </div>
+
+</div>

@@ -1,0 +1,39 @@
+
+.datosPerContainer {
+    padding: 0.5em;
+}
+
+.avatarContainer {
+    width: 16%;
+}
+
+.mainTabsContainer {
+    width: 84%;
+}
+
+.menu-info {
+    margin: 1px;
+    padding: 0.5em 2em;
+    border: black solid 1px;
+    border-radius: 3px;
+    background-color: var(--indigo-300);
+    font-size: 13px;
+    margin-bottom: 3em;
+}
+
+.imageContainer {
+    width: 80%;
+    margin: auto;
+}
+
+.imageUser{
+    width: 100%;
+    background-color: white;
+    border: black solid 1px;
+    border-radius: 3px;
+}
+
+:host ::ng-deep .p-tabview-panels{
+    background-color: var(--indigo-300);
+    border-color: black;
+}

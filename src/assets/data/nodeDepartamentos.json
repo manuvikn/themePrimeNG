@@ -1,0 +1,23 @@
+{
+    "data":
+    [
+        {
+            "label": "Departamento",
+            "data": "Dep1",
+            "expandedIcon": "pi pi-folder-open",
+            "collapsedIcon": "pi pi-folder",
+            "children": [{
+                    "label": "Departamento 1",
+                    "data": "Dep1-1",
+                    "expandedIcon": "pi pi-folder-open",
+                    "collapsedIcon": "pi pi-folder"
+                },
+                {
+                    "label": "Departamento 2",
+                    "data": "Dep1-2",
+                    "expandedIcon": "pi pi-folder-open",
+                    "collapsedIcon": "pi pi-folder"
+                }]
+        }
+    ]
+}

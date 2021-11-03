@@ -1,0 +1,60 @@
+<p-panel header="Datos personales">
+    
+    <div class="p-grid">
+
+        <div class="p-col-12 p-md-6 p-lg-6">
+            <p>Relación laboral: Funcionaria</p>
+            <p>Correo Corporativo: xxxxxxx@segsocial.com</p>
+            <p>Teléfono interno: nnnnnnnnnnnn</p>    
+        </div>
+
+        <div class="p-col-12 p-md-6 p-lg-6">
+            <p>Cargo/Contrato: </p>
+            <p>Otros correos: xxxxx@ines.es</p>
+            <p>Teléfono móvil: nnnnnnnnn</p>
+        </div>
+    </div>
+
+</p-panel>
+
+<div class="p-mt-3 p-mb-3">
+    <span>Identificador: </span>
+    <p-dropdown id="drop-identificador-usuario" (onChange)="showConfirm()" (onClick)="saveOption()" [options]="identificadores" [(ngModel)]="identificadorSel" optionLabel="name"></p-dropdown>
+
+</div>
+
+<p-panel header="Datos personales">
+    
+    <div>
+        <p>Ubicación: CI XXXXXXXX + Edificio y planta (si los tuviese)</p>
+        <p>Responsables/Coordinador</p>
+        
+    </div>
+
+    <div class="marginTop4">
+        <p>Silcon: xxxxxxxxxxxxxxxxxx (Activo/Cancelado)</p>
+        <p>Silueta contexto principal</p>
+
+    </div>
+
+</p-panel>
+
+<p-toast position="bottom-center" key="c" (onClose)="onReject()" [baseZIndex]="5000">
+    <ng-template let-message pTemplate="message">
+        <div class="p-flex p-flex-column" style="flex: 1">
+            <div class="p-text-center">
+                <i class="pi pi-exclamation-triangle" style="font-size: 3rem"></i>
+                <h4>{{message.summary}}</h4>
+                <p>{{message.detail}}</p>
+            </div>
+            <div class="p-grid p-fluid">
+                <div class="p-col-6">
+                    <button type="button" pButton (click)="onConfirm()" label="Yes" class="p-button-success"></button>
+                </div>
+                <div class="p-col-6">
+                    <button type="button" pButton (click)="onReject()" label="No" class="p-button-secondary"></button>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</p-toast>
