@@ -13,8 +13,9 @@ export class FiltroUsuarioConsultaComponent implements OnInit {
     departamentos: any = {};
     depKeys: Array<any> = [];
 
-    selectedDeps: TreeNode | undefined;
+    selectedDeps: TreeNode[] | undefined;
     depNodes: TreeNode[] = [];
+    newDepartamentos: TreeNode[] = [];
 
     constructor(private http: HttpClient) {}
 
@@ -41,7 +42,10 @@ export class FiltroUsuarioConsultaComponent implements OnInit {
     loadJsonDeps() {
 
         this.http.get('/assets/data/nodeDepartamentos.json').toPromise()
-            .then(({data}:any) => this.depNodes = data)
+            .then(({data}:any) => {
+                this.depNodes = data;
+                this.newDepartamentos = [...data];
+            })
             .catch(err => new Error(err));
 
     }
@@ -50,6 +54,39 @@ export class FiltroUsuarioConsultaComponent implements OnInit {
         console.log(event);
         console.log(this.selectedDeps);
         
+    }
+
+    searchDep(inputDep: string) {
+        
+        if (this.depNodes != []) {
+            inputDep = inputDep.toLowerCase().trim();
+            
+            this.newDepartamentos = [];
+            this.depNodes.forEach((item: any) => {
+                
+                let label = item['label'].toLowerCase().trim();
+                if (label.includes(inputDep)) {
+                    this.newDepartamentos.push({...item});
+                } else {
+                    let breakLoop = false;
+                    let count = 0;
+                    while (!breakLoop && count < item['children'].length) {
+                        
+                        let subDep = item.children[count];
+                        
+                        let labelChil = subDep['label'].toLowerCase().trim();
+                        if (labelChil.includes(inputDep)) {
+                            
+                            this.newDepartamentos.push({...item});
+                            this.newDepartamentos[this.newDepartamentos.length - 1].expanded = true;
+                            breakLoop = true;
+                        }
+                        count ++;
+                    }
+                }
+            });
+
+        }
     }
 
 }

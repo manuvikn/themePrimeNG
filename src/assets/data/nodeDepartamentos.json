@@ -18,6 +18,60 @@
                     "expandedIcon": "pi pi-folder-open",
                     "collapsedIcon": "pi pi-folder"
                 }]
+        },
+        {
+            "label": "Departamento2",
+            "data": "Dep2",
+            "expandedIcon": "pi pi-folder-open",
+            "collapsedIcon": "pi pi-folder",
+            "children": [{
+                    "label": "Departamento 3",
+                    "data": "Dep2-1",
+                    "expandedIcon": "pi pi-folder-open",
+                    "collapsedIcon": "pi pi-folder"
+                },
+                {
+                    "label": "Departamento 4",
+                    "data": "Dep2-2",
+                    "expandedIcon": "pi pi-folder-open",
+                    "collapsedIcon": "pi pi-folder"
+                }]
+        },
+        {
+            "label": "Departamento3",
+            "data": "Dep3",
+            "expandedIcon": "pi pi-folder-open",
+            "collapsedIcon": "pi pi-folder",
+            "children": [{
+                    "label": "Departamento 5",
+                    "data": "Dep3-1",
+                    "expandedIcon": "pi pi-folder-open",
+                    "collapsedIcon": "pi pi-folder"
+                },
+                {
+                    "label": "Departamento 6",
+                    "data": "Dep3-2",
+                    "expandedIcon": "pi pi-folder-open",
+                    "collapsedIcon": "pi pi-folder"
+                }]
+        },
+        {
+            "label": "Departamento4",
+            "data": "Dep4",
+            "expandedIcon": "pi pi-folder-open",
+            "collapsedIcon": "pi pi-folder",
+            "children": [{
+                    "label": "Departamento 7",
+                    "data": "Dep4-1",
+                    "expandedIcon": "pi pi-folder-open",
+                    "collapsedIcon": "pi pi-folder"
+                },
+                {
+                    "label": "Departamento 8",
+                    "data": "Dep4-2",
+                    "expandedIcon": "pi pi-folder-open",
+                    "collapsedIcon": "pi pi-folder"
+                }]
         }
     ]
 }

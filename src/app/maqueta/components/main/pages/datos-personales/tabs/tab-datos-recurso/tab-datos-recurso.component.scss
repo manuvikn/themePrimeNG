@@ -1,0 +1,29 @@
+.tabRecursoContainer{
+    background-color: var(--indigo-100);
+    padding: 1em;
+}
+
+:host ::ng-deep #tiposRecursosDrop .p-dropdown{
+    width: 20vw !important;
+    border-color: black;
+}
+
+:host ::ng-deep #aplicacionDrop .p-dropdown{
+    border-color: black;
+}
+
+#inputAplicacion {
+    border-top-color: black;
+    border-left-color: black;
+    border-right-color: black;
+}
+
+#buttonAplicacion {
+    border-top-color: black;
+    border-right-color: black;
+}
+
+.botonBuscar {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}

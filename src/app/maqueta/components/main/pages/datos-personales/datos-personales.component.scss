@@ -35,5 +35,19 @@
 
 :host ::ng-deep .p-tabview-panels{
     background-color: var(--indigo-300);
-    border-color: black;
 }
+
+@media (max-width: 700px) {
+    .datosPerContainer {
+        flex-direction: column;
+    }
+    .avatarContainer {
+        width: 30%;
+        margin: auto;
+        margin-bottom: 1em;
+    }
+    .mainTabsContainer {
+        width: 100%;
+    }
+    
+  }

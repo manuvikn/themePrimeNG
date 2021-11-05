@@ -13,25 +13,13 @@ import {TreeModule} from 'primeng/tree';
 import {TabViewModule} from 'primeng/tabview';
 import {DropdownModule} from 'primeng/dropdown';
 import {ToastModule} from 'primeng/toast';
+import {ScrollTopModule} from 'primeng/scrolltop';
+import {OverlayPanelModule} from 'primeng/overlaypanel';
+
 
 @NgModule({
     declarations: [],
-    imports: [ 
-        CommonModule,
-        MenubarModule,
-        InputTextModule,
-        ButtonModule,
-        TableModule,
-        CardModule,
-        PanelModule,
-        FieldsetModule,
-        CheckboxModule,
-        AccordionModule,
-        TreeModule,
-        TabViewModule,
-        DropdownModule,
-        ToastModule
-    ],
+    imports: [CommonModule],
     exports: [
         MenubarModule,
         InputTextModule,
@@ -45,7 +33,9 @@ import {ToastModule} from 'primeng/toast';
         TreeModule,
         TabViewModule,
         DropdownModule,
-        ToastModule
+        ToastModule,
+        ScrollTopModule,
+        OverlayPanelModule
     ],
     providers: [],
 })

@@ -4,7 +4,12 @@ import { FormsModule } from "@angular/forms";
 import { PrimeNgModule } from "../primeNG/primeng.module";
 import { MaquetaMainComponent } from "./components/main/main.component";
 import { DatosPersonalesComponent } from "./components/main/pages/datos-personales/datos-personales.component";
+import { TabDatosPerfilComponent } from "./components/main/pages/datos-personales/tabs/tab-datos-perfil/tab-datos-perfil.component";
+import { TablaDepDelegadosComponent } from "./components/main/pages/datos-personales/tabs/tab-datos-perfil/tabs/tab-perfil-departamental/components/tabla-dep-delegados/tabla-dep-delegados.component";
+import { TabPerfilDepartamentalComponent } from "./components/main/pages/datos-personales/tabs/tab-datos-perfil/tabs/tab-perfil-departamental/tab-perfil-departamental.component";
 import { TabDatosPersonalesComponent } from "./components/main/pages/datos-personales/tabs/tab-datos-personales/tab-datos-personales.component";
+import { TablaDatosRecursoComponent } from "./components/main/pages/datos-personales/tabs/tab-datos-recurso/components/tabla-datos-recurso/tabla-datos-recurso.component";
+import { TabDatosRecursoComponent } from "./components/main/pages/datos-personales/tabs/tab-datos-recurso/tab-datos-recurso.component";
 import { FiltroUsuarioConsultaComponent } from "./components/main/pages/usuario-consulta/components/filtro-usuario-consulta/filtro-usuario-consulta.component";
 import { InfoUsuarioConsultaComponent } from "./components/main/pages/usuario-consulta/components/info-usuario-consulta/info-usuario-consulta.component";
 import { TablaUsuarioConsultaComponent } from "./components/main/pages/usuario-consulta/components/tabla-usuario-consulta/tabla-usuario-consulta.component";
@@ -20,7 +25,12 @@ import { MaquetaRouterModule } from "./router.maqueta.module";
         FiltroUsuarioConsultaComponent,
         TablaUsuarioConsultaComponent,
         DatosPersonalesComponent,
-        TabDatosPersonalesComponent
+        TabDatosPersonalesComponent,
+        TabDatosPerfilComponent,
+        TabPerfilDepartamentalComponent,
+        TablaDepDelegadosComponent,
+        TabDatosRecursoComponent,
+        TablaDatosRecursoComponent
     ], 
     imports: [
         CommonModule,

@@ -1,12 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 
-
-/* body {
-
-    // background-color: var(--teal-100);
-
-} */
-
 .p-component {
     background-color: var(--indigo-100);
 }
@@ -17,10 +10,27 @@
 }
 
 #accordion-usuario-consulta .p-accordion .p-accordion-header .p-accordion-header-link {
+    color: #ffff;
+    background-color: var(--indigo-300) !important;
+    border-color: black !important;
+}
+
+#filtro-datos-recurso .p-accordion-content {
+    background-color: var(--indigo-100) !important;
+    border-color: var(--indigo-100);
+}
+
+#accordion-datos-recurso .p-accordion .p-accordion-header .p-accordion-header-link {
+    color: #ffff;
     background-color: var(--indigo-300) !important;
     border-color: black !important;
 }
 
 .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
     background-color: var(--indigo-300) !important;
+}
+
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link{
+    color: var(--indigo-400) !important;
+    border-color: var(--indigo-400);
 }

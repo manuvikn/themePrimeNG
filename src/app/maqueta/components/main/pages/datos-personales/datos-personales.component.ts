@@ -20,7 +20,7 @@ export class DatosPersonalesComponent implements OnInit{
     ngOnInit() {
         const id = this.route.snapshot.params['id'];
         this.today = new Date().toLocaleDateString();
-        this.getUserById(id); 
+        this.getUserById(id);
     }
 
     getUserById(id: number) {
