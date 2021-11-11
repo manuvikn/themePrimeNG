@@ -6,31 +6,7 @@
                 Filtros
             </ng-template>
             
-            <div class="p-d-flex p-jc-around p-flex-wrap">
-                <div class="p-d-flex p-flex-wrap p-ai-center p-mr-4">
-                    <span>Tipo de recurso &nbsp;</span>
-                    <p-dropdown id="tiposRecursosDrop" [options]="tiposRecursos" [(ngModel)]="tipoRecurso" optionLabel="name" optionValue="code"></p-dropdown>
-                </div>
-        
-                <div class="p-d-flex p-flex-wrap p-mt-2">
-                    <div class="p-as-end">
-                        <span>Aplciación &nbsp;</span>
-                    </div>
-                    <div class="p-d-flex p-flex-column">
-                        <div class="p-inputgroup">
-                            <input type="text" pInputText id="inputAplicacion">         
-                            <button id="buttonAplicacion" pButton type="button" (click)="op.toggle($event)"
-                            icon="pi pi-search" iconPos="right" class="p-button-secondary"></button>
-                            <p-overlayPanel #op>
-                                <ng-template pTemplate>
-                                    Content
-                                </ng-template>
-                            </p-overlayPanel>
-                        </div>
-                        <p-dropdown id="aplicacionDrop" [options]="tiposRecursos" [(ngModel)]="tipoRecurso" optionLabel="name" optionValue="code"></p-dropdown>
-                    </div>
-                </div>
-            </div>
+            <filtro-datos-recurso></filtro-datos-recurso>
 
             <div class="p-d-flex p-jc-center botonBuscar">
                 <p-button type="button" label="Buscar" styleClass="p-button-info"></p-button>
@@ -41,5 +17,10 @@
 
 
     <tabla-datos-recurso></tabla-datos-recurso>
+    
+    <div class="p-mt-4">
+        <button pButton pRipple type="button" label="Exportar selección" class="p-button-success"></button>
+        <button pButton pRipple type="button" label="Exportar completo" class="p-button-success" style="margin-left: 3em;"></button>
+    </div>
 
 </div>

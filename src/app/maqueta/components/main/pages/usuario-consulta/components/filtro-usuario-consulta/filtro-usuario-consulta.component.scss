@@ -31,3 +31,8 @@
     top: 0px; 
     z-index: 1;
 }
+
+:host ::ng-deep .p-dropdown {
+    align-items: center;
+    width: 100%;
+}

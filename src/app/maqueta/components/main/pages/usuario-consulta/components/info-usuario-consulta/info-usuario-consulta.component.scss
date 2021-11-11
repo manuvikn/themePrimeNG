@@ -1,6 +1,6 @@
 .menu-info {
     margin: 1px;
-    padding: 0 1em;
+    padding: 0.5em 1em;
     border: black solid 1px;
     border-radius: 3px;
     background-color: var(--indigo-300);
@@ -9,4 +9,8 @@
 
 .paddingNone {
     padding: 0px;
+}
+
+.buttonPower {
+    background-color: black;
 }

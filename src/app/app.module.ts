@@ -5,17 +5,25 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { MaquetaModule } from './maqueta/maqueta.module';
+import { MainComponent } from './components/main/main.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { UsersComponent } from './components/users/users.component';
+import { PrimeNgModule } from './primeNG/primeng.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainComponent,
+    NavbarComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MaquetaModule
+    MaquetaModule,
+    PrimeNgModule
   ],
   providers: [],
   bootstrap: [AppComponent]

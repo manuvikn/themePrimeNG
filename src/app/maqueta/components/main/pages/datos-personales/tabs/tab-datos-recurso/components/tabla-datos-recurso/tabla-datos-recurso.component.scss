@@ -1,8 +1,8 @@
 :host ::ng-deep .p-datatable {
-    border: black 1px solid;
     .p-datatable-thead > tr > th {
         background-color: var(--indigo-300);
         color: #ffff;
+        border: none;
     }
     .p-sortable-column .p-sortable-column-icon{
         color: #ffff;
@@ -15,4 +15,34 @@
         background-color: var(--indigo-400);
         color: white;
     }
+    .p-column-filter-menu-button:hover{
+        background: var(--indigo-100);
+        color: black;
+    }
+    .p-column-filter-menu-button{
+        color: #ffff;
+    }
+    .p-column-filter-clear-button{
+        color: #ffff;
+    }
+    .p-column-filter-clear-button:hover{
+        background: var(--indigo-100);
+        color: black;
+    }
+    .p-column-filter-menu-button.p-column-filter-menu-button-active, .p-column-filter-menu-button.p-column-filter-menu-button-active:hover{
+        background: var(--indigo-200);
+    }
+   .p-column-filter-menu-button.p-column-filter-menu-button-open, .p-column-filter-menu-button.p-column-filter-menu-button-open:hover{
+       color: black;
+   }
+}
+
+.buttonFilter {
+    color: white;
+    margin-left: 0.5em;
+}
+
+.buttonFilter:hover {
+    color: black !important;
+    background-color: var(--indigo-100) !important;
 }

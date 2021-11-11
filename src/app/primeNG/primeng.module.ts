@@ -15,6 +15,8 @@ import {DropdownModule} from 'primeng/dropdown';
 import {ToastModule} from 'primeng/toast';
 import {ScrollTopModule} from 'primeng/scrolltop';
 import {OverlayPanelModule} from 'primeng/overlaypanel';
+import {MultiSelectModule} from 'primeng/multiselect';
+import {RippleModule} from 'primeng/ripple';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import {OverlayPanelModule} from 'primeng/overlaypanel';
         DropdownModule,
         ToastModule,
         ScrollTopModule,
-        OverlayPanelModule
+        OverlayPanelModule,
+        MultiSelectModule,
+        RippleModule
     ],
     providers: [],
 })

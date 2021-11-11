@@ -8,6 +8,7 @@ import { TabDatosPerfilComponent } from "./components/main/pages/datos-personale
 import { TablaDepDelegadosComponent } from "./components/main/pages/datos-personales/tabs/tab-datos-perfil/tabs/tab-perfil-departamental/components/tabla-dep-delegados/tabla-dep-delegados.component";
 import { TabPerfilDepartamentalComponent } from "./components/main/pages/datos-personales/tabs/tab-datos-perfil/tabs/tab-perfil-departamental/tab-perfil-departamental.component";
 import { TabDatosPersonalesComponent } from "./components/main/pages/datos-personales/tabs/tab-datos-personales/tab-datos-personales.component";
+import { FiltroDatosRecursoComponent } from "./components/main/pages/datos-personales/tabs/tab-datos-recurso/components/filtro-datos-recurso/filtro-datos-recurso.component";
 import { TablaDatosRecursoComponent } from "./components/main/pages/datos-personales/tabs/tab-datos-recurso/components/tabla-datos-recurso/tabla-datos-recurso.component";
 import { TabDatosRecursoComponent } from "./components/main/pages/datos-personales/tabs/tab-datos-recurso/tab-datos-recurso.component";
 import { FiltroUsuarioConsultaComponent } from "./components/main/pages/usuario-consulta/components/filtro-usuario-consulta/filtro-usuario-consulta.component";
@@ -30,7 +31,8 @@ import { MaquetaRouterModule } from "./router.maqueta.module";
         TabPerfilDepartamentalComponent,
         TablaDepDelegadosComponent,
         TabDatosRecursoComponent,
-        TablaDatosRecursoComponent
+        TablaDatosRecursoComponent,
+        FiltroDatosRecursoComponent
     ], 
     imports: [
         CommonModule,

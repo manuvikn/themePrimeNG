@@ -1,5 +1,46 @@
 
-<div class="p-d-flex datosPerContainer">
+<div class="mainTabsContainer">
+
+    <div class="menu-info p-d-flex">
+        <div>
+            <button pButton (click)="navigateBefore()" type="button" class="p-button-text buttonArrow" icon="pi pi-arrow-left" iconPos="left"></button>
+        </div>
+        <div class="blockInfoMenu">
+            <div class="p-d-flex p-flex-wrap p-jc-between p-mb-1">
+    
+                <span><strong>Nombre y apellidos:</strong> {{ usuario?.nombre + ' ' + usuario?.apellido1 + ' ' + usuario?.apellido2 }}</span>
+                <span><strong>DNI/NIE:</strong> {{ usuario?.dni }}</span>
+    
+            </div>
+    
+            <div class="p-d-flex p-flex-wrap p-jc-between">
+    
+                <span><strong>Identificador:</strong> {{ usuario?.identificador }}</span>
+                <span><strong>Departamento:</strong> {{ usuario?.departamento }}</span>
+                <span><strong>Fecha:</strong> {{today}}</span>
+    
+            </div>
+        </div>
+        <div class="p-ml-3">
+            <button pButton pRipple type="button" icon="pi pi-power-off" class="p-button-rounded p-button-secondary buttonPower"></button>
+        </div>
+
+    </div>
+
+    <p-tabView [(activeIndex)]="activatedPage">
+        <p-tabPanel header="Datos personales">
+            <tab-datos-personales></tab-datos-personales>
+        </p-tabPanel>
+        <p-tabPanel header="Datos del perfil">
+            <tab-datos-perfil></tab-datos-perfil>
+        </p-tabPanel>
+        <p-tabPanel header="Datos recursos">
+            <tab-datos-recurso></tab-datos-recurso>
+        </p-tabPanel>
+    </p-tabView>
+
+</div>
+<!-- <div class="p-d-flex datosPerContainer">
 
     <div class="avatarContainer">
 
@@ -9,39 +50,5 @@
 
     </div>
 
-    <div class="mainTabsContainer">
 
-        <div class="menu-info">
-            
-            <div class="p-d-flex p-flex-wrap p-jc-between p-mb-1">
-
-                <span><strong>Nombre y apellidos:</strong> {{ usuario?.nombre + ' ' + usuario?.apellido1 + ' ' + usuario?.apellido2 }}</span>
-                <span><strong>DNI/NIE:</strong> {{ usuario?.dni }}</span>
-
-            </div>
-
-            <div class="p-d-flex  p-flex-wrap p-jc-between">
-
-                <span><strong>Identificador:</strong> {{ usuario?.identificador }}</span>
-                <span><strong>Departamento:</strong> {{ usuario?.departamento }}</span>
-                <span><strong>Fecha:</strong> {{today}}</span>
-
-            </div>
-
-        </div>
-
-        <p-tabView>
-            <p-tabPanel header="Datos personales" [selected]="true">
-               <tab-datos-personales></tab-datos-personales>
-            </p-tabPanel>
-            <p-tabPanel header="Datos del perfil">
-                <tab-datos-perfil></tab-datos-perfil>
-            </p-tabPanel>
-            <p-tabPanel header="Datos recursos">
-                <tab-datos-recurso></tab-datos-recurso>
-            </p-tabPanel>
-        </p-tabView>
-
-    </div>
-
-</div>
+</div> -->

@@ -1,0 +1,47 @@
+:host ::ng-deep #tiposRecursosDrop .p-dropdown{
+    width: 20vw !important;
+    border-color: black;
+}
+
+:host ::ng-deep #aplicacionDrop .p-dropdown{
+    border-color: black;
+}
+
+:host ::ng-deep #aplicacionOverDrop .p-dropdown{
+    border-color: black !important;
+}
+
+#inputAplicacion {
+    border-top-color: black;
+    border-left-color: black;
+    border-right-color: black;
+}
+
+#buttonAplicacion {
+    border-top-color: black;
+    border-right-color: black;
+}
+
+#inputOverAplicacion {
+    border-color: black;
+    width: 90%;
+}
+
+#buttonOverAplicacion {
+    border-top-color: black;
+    border-right-color: black;
+    border-bottom-color: black;
+    width: 10%;
+}
+.widthMax {
+    width: 100%;
+}
+
+.checkContainer {
+    height: 15em;
+    overflow: auto;
+}
+
+.marginNone {
+    margin: 0;
+}

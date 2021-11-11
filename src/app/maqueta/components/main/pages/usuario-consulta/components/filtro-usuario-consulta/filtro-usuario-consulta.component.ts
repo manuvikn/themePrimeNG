@@ -13,6 +13,21 @@ export class FiltroUsuarioConsultaComponent implements OnInit {
     departamentos: any = {};
     depKeys: Array<any> = [];
 
+    // dropdowns
+    usuarioDropDown: Array<any> = [
+        {name: 'Nombre', code: 'nombre'},
+        {name: 'Dni', code: 'dni'},
+        {name: 'Identificador', code: 'id'},
+    ];
+    tipoDropDown: Array<any> = [
+        {name: 'Recurso', code: 'recurso'},
+        {name: 'Aplicación', code: 'aplicacion'},
+        {name: 'Rol', code: 'rol'},
+        {name: 'Grupo', code: 'grupo'},
+    ];
+    usuarioDropSelected: any;
+    tipoDropSelected: any;
+
     selectedDeps: TreeNode[] | undefined;
     depNodes: TreeNode[] = [];
     newDepartamentos: TreeNode[] = [];

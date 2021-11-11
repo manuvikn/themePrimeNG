@@ -10,14 +10,13 @@ import { Router } from "@angular/router";
 export class TablaUsuarioConsultaComponent implements OnInit {
 
     tableItems: Array<any> = [];
-
+    
     constructor(private http: HttpClient, 
             private router: Router) {}
 
     ngOnInit() {
 
         this.loadRandomTableItems();
-
     }
 
     loadRandomTableItems() {
@@ -28,8 +27,16 @@ export class TablaUsuarioConsultaComponent implements OnInit {
 
     }
 
-    navigateToPersonalData(dni: string) {
-        this.router.navigateByUrl(`datos-personales/${dni}`);
+    navigateToPersonalData(id: string, page: number) {
+        this.router.navigateByUrl(`datos-personales/${id}`, {state: {'page': page}});
+    }
+
+    mostrarVer(event: any, op: any) {
+        try {
+            op.toggle(event);
+        } catch(err) {
+            console.log(err);
+        }
     }
 
 }

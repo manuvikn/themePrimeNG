@@ -7,13 +7,11 @@
     width: 16%;
 }
 
-.mainTabsContainer {
-    width: 84%;
-}
-
 .menu-info {
     margin: 1px;
-    padding: 0.5em 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-right: 1em;
     border: black solid 1px;
     border-radius: 3px;
     background-color: var(--indigo-300);
@@ -33,21 +31,25 @@
     border-radius: 3px;
 }
 
+.buttonArrow {
+    height: 100%;
+    margin-left: 0.5em;
+    color: black;
+}
+
+.buttonArrow:hover {
+    color: black !important;
+}
+
+.blockInfoMenu{
+    margin-left: 1em;
+    width: 97%;
+}
+
+.buttonPower {
+    background-color: black;
+}
+
 :host ::ng-deep .p-tabview-panels{
     background-color: var(--indigo-300);
 }
-
-@media (max-width: 700px) {
-    .datosPerContainer {
-        flex-direction: column;
-    }
-    .avatarContainer {
-        width: 30%;
-        margin: auto;
-        margin-bottom: 1em;
-    }
-    .mainTabsContainer {
-        width: 100%;
-    }
-    
-  }

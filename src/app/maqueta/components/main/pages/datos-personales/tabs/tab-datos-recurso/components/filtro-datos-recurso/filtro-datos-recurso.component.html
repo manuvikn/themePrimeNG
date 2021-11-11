@@ -1,0 +1,31 @@
+<div class="p-d-flex p-jc-around p-flex-wrap">
+    <div class="p-d-flex p-flex-wrap p-ai-center p-mr-4">
+        <h4 class="marginNone">Tipo de recurso &nbsp;</h4>
+        <p-dropdown id="tiposRecursosDrop" [options]="tiposRecursos" [(ngModel)]="tipoRecurso" optionLabel="name" optionValue="code"></p-dropdown>
+    </div>
+
+    <div class="p-d-flex p-flex-wrap p-mt-2">
+        <div class="p-as-end">
+            <h4 class="marginNone">Aplciación &nbsp;</h4>
+        </div>
+        <div class="p-d-flex p-flex-column">
+            <p-multiSelect [options]="checkAplicaciones" [(ngModel)]="checkAplicacionesSelect" (onChange)="refreshInputAplicacion()"
+            optionLabel="name" [style]="{'width': '15em', 'border-color': 'black'}">
+                <ng-template pTemplate="emptyfilter">
+                    No se encontró ninguna aplicación
+                </ng-template>
+            </p-multiSelect>
+            <!-- <div class="p-inputgroup">
+                <input type="text" pInputText [(ngModel)]="inputAplicacion" id="inputAplicacion">         
+                <button id="buttonAplicacion" pButton type="button" (click)="op.toggle($event)"
+                icon="pi pi-search" iconPos="right" class="p-button-secondary"></button>
+                <p-overlayPanel #op>
+                    <ng-template pTemplate>
+                        
+                    </ng-template>
+                </p-overlayPanel>
+            </div>
+            <p-dropdown id="aplicacionDrop" [options]="tiposRecursos" [(ngModel)]="tipoRecurso" optionLabel="name" optionValue="code"></p-dropdown> -->
+        </div>
+    </div>
+</div>

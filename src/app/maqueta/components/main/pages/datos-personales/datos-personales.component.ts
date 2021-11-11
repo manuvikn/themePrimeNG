@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { map } from "rxjs/operators";
 import { Usuario } from "src/app/maqueta/models/usuario";
 
@@ -13,14 +13,17 @@ export class DatosPersonalesComponent implements OnInit{
 
     usuario: Usuario | undefined;
     today: string = '';
+    activatedPage: number = 0;
 
     constructor(private route: ActivatedRoute,
-                private http: HttpClient) {}
+                private http: HttpClient,
+                private router: Router) {}
 
     ngOnInit() {
         const id = this.route.snapshot.params['id'];
         this.today = new Date().toLocaleDateString();
         this.getUserById(id);
+        history.state.page ? this.activatedPage = history.state.page : this.activatedPage = 0;
     }
 
     getUserById(id: number) {
@@ -33,6 +36,12 @@ export class DatosPersonalesComponent implements OnInit{
             )
             .subscribe( ([response]) => this.usuario = response);
             
+
+    }
+
+    navigateBefore() {
+
+        this.router.navigate(['']);
 
     }
 

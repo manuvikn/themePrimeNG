@@ -8,7 +8,7 @@ currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} registro
             <th  pSortableColumn="dni">DNI/NIE <p-sortIcon field="dni"></p-sortIcon></th>
             <th  pSortableColumn="identificador">Identificador <p-sortIcon field="identificador"></p-sortIcon></th>
             <th  pSortableColumn="departamento" >Departamento <p-sortIcon field="departamento"></p-sortIcon></th>
-            <th>Consulta</th>            
+            <th>Consulta</th>         
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-item>
@@ -17,7 +17,27 @@ currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} registro
             <td>{{item.dni}}</td>
             <td>{{item.identificador}}</td>
             <td>{{item.departamento}}</td>
-            <td class="p-text-center"><p-button label="Ver" styleClass="p-button-info" (click)="navigateToPersonalData(item.id)"></p-button></td>
+            <td class="p-text-center">
+                <span (click)="mostrarVer($event, op)" class="pointer">Ver</span>
+                <!-- <button pButton pRipple label="Ver" class="p-button-info"></button> -->
+            </td>
+            <p-overlayPanel #op>
+                <ng-template pTemplate>
+                    <div class="p-d-flex p-flex-column">
+                        <span class="pointer p-mb-1" (click)="navigateToPersonalData(item.id, 0)">
+                            <i class="pi pi-file"></i>
+                            Datos personales</span>
+                        <span class="pointer p-mb-1" (click)="navigateToPersonalData(item.id, 1)">
+                            <i class="pi pi-file"></i>
+                            Perfil
+                        </span>
+                        <span class="pointer p-mb-1" (click)="navigateToPersonalData(item.id, 2)">
+                            <i class="pi pi-file"></i>
+                            Recursos
+                        </span>
+                    </div>
+                </ng-template>
+            </p-overlayPanel>
         </tr>
     </ng-template>
 </p-table>
