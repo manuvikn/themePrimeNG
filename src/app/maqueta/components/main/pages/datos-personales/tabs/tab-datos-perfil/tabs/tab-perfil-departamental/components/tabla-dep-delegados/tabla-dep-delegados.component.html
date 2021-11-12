@@ -1,7 +1,11 @@
-<p-table [value]="depDelegados" 
-[paginator]="true" [rows]="5" [showCurrentPageReport]="true" responsiveLayout="scroll"
-currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} registros" 
-[rowsPerPageOptions]="[5,10,15]" styleClass="p-datatable-striped">
+<p-table #table [value]="depDelegados"
+[lazy]="true" (onLazyLoad)="loadDatosDepDelegados($event)"
+responsiveLayout="scroll"
+[paginator]="true" [rows]="5" [totalRecords]="totalRecords"
+styleClass="p-datatable-striped p-datatable-sm"
+[showCurrentPageReport]="true" [rowsPerPageOptions]="[5,10,15]"
+currentPageReportTemplate="Mostrando {first} - {last} de {totalRecords} registros"
+[loading]="loading">
     <ng-template pTemplate="header">
         <tr>
             <th  pSortableColumn="codigo">Codigo <p-sortIcon field="codigo"></p-sortIcon></th>

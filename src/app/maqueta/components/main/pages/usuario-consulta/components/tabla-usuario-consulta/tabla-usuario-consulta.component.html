@@ -1,7 +1,11 @@
-<p-table [value]="tableItems" 
-[paginator]="true" [rows]="10" [showCurrentPageReport]="true" responsiveLayout="scroll"
-currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} registros" 
-[rowsPerPageOptions]="[5,10,25,50]" styleClass="p-datatable-striped">
+<p-table #table [value]="tableItems"
+[lazy]="true" (onLazyLoad)="loadDatosUsuarioCon($event)"
+responsiveLayout="scroll"
+[paginator]="true" [rows]="10" [totalRecords]="totalRecords"
+styleClass="p-datatable-striped p-datatable-sm"
+[showCurrentPageReport]="true" [rowsPerPageOptions]="[5,10,15]"
+currentPageReportTemplate="Mostrando {first} - {last} de {totalRecords} registros"
+[loading]="loading">
     <ng-template pTemplate="header">
         <tr>
             <th  pSortableColumn="nombre">Nombre y Apellidos <p-sortIcon field="nombre"></p-sortIcon></th>
