@@ -1,5 +1,4 @@
-import { Component } from "@angular/core";
-
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'info-usuario-consulta',
@@ -8,5 +7,4 @@ import { Component } from "@angular/core";
 })
 export class InfoUsuarioConsultaComponent {
     
-    constructor() {}
 }

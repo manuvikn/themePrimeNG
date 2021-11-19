@@ -2,14 +2,14 @@
 
 <div class="container">
     <p-accordion id="accordion-usuario-consulta">
-        <p-accordionTab id="filtro-usuario-consulta" [selected]="true">
+        <p-accordionTab id="filtro-usuario-consulta" [(selected)]="filterAccordion">
             <ng-template pTemplate="header">
                 Filtros
             </ng-template>
             <filtro-usuario-consulta></filtro-usuario-consulta>
             
             <div class="p-d-flex p-jc-center p-mb-4">
-                <p-button label="Buscar" styleClass="p-button-info"></p-button>
+                <p-button (click)="filterAccordion = false" label="Buscar" styleClass="p-button-info"></p-button>
             </div>
         </p-accordionTab>
     </p-accordion>

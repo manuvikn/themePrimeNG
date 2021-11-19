@@ -1,0 +1,26 @@
+
+
+<div class="p-d-flex p-jc-center p-ai-center p-mt-4 p-ml-4">
+
+    <ng-template [ngIf]="showBeforeButton">
+        <div (click)="firstPage()" class="p-d-flex p-jc-center p-ai-center page">
+            <i class="pi pi-angle-double-left"></i>
+        </div>
+        <div (click)="pageBefore()" class="p-d-flex p-jc-center p-ai-center page">
+            <i class="pi pi-angle-left"></i>
+        </div>
+    </ng-template>
+
+    <page-item *ngFor="let page of arrPagesVisibles" #pageItem
+    [pageValue]="page" (click)="changeFocusPageIndex(pageItem)" class="page"></page-item>
+    
+    <ng-template [ngIf]="showAfterButton">
+        <div *ngIf="showAfterButton" (click)="pageAfter()" class="p-d-flex p-jc-center p-ai-center page">
+            <i class="pi pi-angle-right"></i>
+        </div>
+        <div *ngIf="showAfterButton" (click)="lastPage()" class="p-d-flex p-jc-center p-ai-center page">
+            <i class="pi pi-angle-double-right"></i>
+        </div>
+    </ng-template>
+
+</div>

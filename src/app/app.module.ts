@@ -9,6 +9,7 @@ import { MainComponent } from './components/main/main.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { UsersComponent } from './components/users/users.component';
 import { PrimeNgModule } from './primeNG/primeng.module';
+import { CustomPaginatorModule } from './paginator/paginator.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { PrimeNgModule } from './primeNG/primeng.module';
     HttpClientModule,
     BrowserAnimationsModule,
     MaquetaModule,
-    PrimeNgModule
+    PrimeNgModule,
+    CustomPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

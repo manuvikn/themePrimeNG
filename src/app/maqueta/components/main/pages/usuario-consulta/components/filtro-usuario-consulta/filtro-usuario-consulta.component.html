@@ -5,7 +5,8 @@
         <h4>Departamento</h4>
 
         <p-tree [value]="newDepartamentos" selectionMode="checkbox" [(selection)]="selectedDeps"
-        [propagateSelectionUp]="false" [propagateSelectionDown]="false">
+        [propagateSelectionUp]="false" [propagateSelectionDown]="false"
+        (onNodeUnselect)="unSelectNode($event)">
             <ng-template pTemplate="header">
                 <span class="p-input-icon-left positionSticky" style="width: 100%;">
                     <i class="pi pi-search"></i>

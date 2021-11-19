@@ -1,7 +1,7 @@
 <div class="tabRecursoContainer">
 
     <p-accordion id="accordion-datos-recurso">
-        <p-accordionTab id="filtro-datos-recurso" [selected]="true">
+        <p-accordionTab id="filtro-datos-recurso" [(selected)]="filterAccordion">
             <ng-template pTemplate="header">
                 Filtros
             </ng-template>
@@ -9,7 +9,7 @@
             <filtro-datos-recurso></filtro-datos-recurso>
 
             <div class="p-d-flex p-jc-center botonBuscar">
-                <p-button type="button" label="Buscar" styleClass="p-button-info"></p-button>
+                <p-button (click)="filterAccordion = false" type="button" label="Buscar" styleClass="p-button-info"></p-button>
             </div>
 
         </p-accordionTab>

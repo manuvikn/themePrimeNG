@@ -22,8 +22,10 @@ currentPageReportTemplate="Mostrando {first} - {last} de {totalRecords} registro
             <td>{{item.identificador}}</td>
             <td>{{item.departamento}}</td>
             <td class="p-text-center">
-                <span (click)="mostrarVer($event, op)" class="pointer">Ver</span>
-                <!-- <button pButton pRipple label="Ver" class="p-button-info"></button> -->
+                <div class="p-d-flex p-ai-center p-jc-around buttonsNavigate">
+                    <span (click)="mostrarVer($event, op)" class="pointerNaviagte"><i class="pi pi-chevron-down"></i></span>
+                    <span (click)="navigateToPersonalData(item.id, 0)" class="pointerNaviagte">Ver</span>
+                </div>
             </td>
             <p-overlayPanel #op>
                 <ng-template pTemplate>
@@ -33,11 +35,11 @@ currentPageReportTemplate="Mostrando {first} - {last} de {totalRecords} registro
                             Datos personales</span>
                         <span class="pointer p-mb-1" (click)="navigateToPersonalData(item.id, 1)">
                             <i class="pi pi-file"></i>
-                            Perfil
+                            Datos del perfil
                         </span>
                         <span class="pointer p-mb-1" (click)="navigateToPersonalData(item.id, 2)">
                             <i class="pi pi-file"></i>
-                            Recursos
+                            Datos recursos
                         </span>
                     </div>
                 </ng-template>

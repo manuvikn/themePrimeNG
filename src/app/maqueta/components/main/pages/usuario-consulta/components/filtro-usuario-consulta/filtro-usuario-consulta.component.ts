@@ -1,6 +1,6 @@
-import { HttpClient } from "@angular/common/http";
-import { Component, OnInit } from "@angular/core";
-import { TreeNode } from "primeng/api";
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { TreeNode } from 'primeng/api';
 
 @Component({
     selector: 'filtro-usuario-consulta',
@@ -43,10 +43,10 @@ export class FiltroUsuarioConsultaComponent implements OnInit {
     loadRandomDeps() {
         this.departamentos = {};
         for (let i = 0; i < 6 ; i++) {
-            let dep: any = [];
-            let depName = 'Departamento ' + (i + 1);
+            const dep: any = [];
+            const depName = 'Departamento ' + (i + 1);
             for (let j = 0; j <5 ; j++) {
-                let subDepName = 'Departamento ' + (i+1) + ' - ' + (j +1);
+                const subDepName = 'Departamento ' + (i+1) + ' - ' + (j +1);
                 dep.push(subDepName);
             }
             this.departamentos[depName] = dep;
@@ -73,13 +73,13 @@ export class FiltroUsuarioConsultaComponent implements OnInit {
 
     searchDep(inputDep: string) {
         
-        if (this.depNodes != []) {
+        /* if (this.depNodes != []) {
             inputDep = inputDep.toLowerCase().trim();
             
             this.newDepartamentos = [];
             this.depNodes.forEach((item: any) => {
                 
-                let label = item['label'].toLowerCase().trim();
+                const label = item['label'].toLowerCase().trim();
                 if (label.includes(inputDep)) {
                     this.newDepartamentos.push({...item});
                 } else {
@@ -87,9 +87,9 @@ export class FiltroUsuarioConsultaComponent implements OnInit {
                     let count = 0;
                     while (!breakLoop && count < item['children'].length) {
                         
-                        let subDep = item.children[count];
+                        const subDep = item.children[count];
                         
-                        let labelChil = subDep['label'].toLowerCase().trim();
+                        const labelChil = subDep['label'].toLowerCase().trim();
                         if (labelChil.includes(inputDep)) {
                             
                             this.newDepartamentos.push({...item});
@@ -101,6 +101,65 @@ export class FiltroUsuarioConsultaComponent implements OnInit {
                 }
             });
 
+        } */
+
+        if (this.depNodes != []) {
+            inputDep = inputDep.toLowerCase().trim();
+            
+            this.newDepartamentos = [];
+            this.depNodes.forEach((item: any) => {
+                
+                const label = item['label'].toLowerCase().trim();
+                if (label.includes(inputDep)) {
+                    this.newDepartamentos.push(item);
+                } else {
+                    let breakLoop = false;
+                    let count = 0;
+                    while (!breakLoop && count < item['children'].length) {
+                        
+                        const subDep = item.children[count];
+                        
+                        const labelChil = subDep['label'].toLowerCase().trim();
+                        if (labelChil.includes(inputDep)) {
+                            
+                            this.newDepartamentos.push(item);
+                            this.newDepartamentos[this.newDepartamentos.length - 1].expanded = true;
+                            breakLoop = true;
+                        }
+                        count ++;
+                    }
+                }
+            });
+
+        }
+    }
+
+    unSelectNode(event: any): any {
+        
+        if (!event.node?.children || !this.selectedDeps) return;        
+
+        const nodeChildrenArr = event.node.children;
+        const allNodes: TreeNode[] = [];
+        let allSelect = true;
+        this.selectedDeps.push(event.node);
+        const parentNodeIndex = this.selectedDeps.length - 1;
+
+        for (let i = 0; i < nodeChildrenArr.length; i++) {
+            if (!this.selectedDeps.includes(nodeChildrenArr[i])) {
+                allSelect = false;
+                allNodes.push(nodeChildrenArr[i]);
+            }
+        }
+
+        if (!allSelect) {
+            this.selectedDeps.push(...allNodes);
+        } else {
+            this.selectedDeps.splice(parentNodeIndex, 1);
+            for (let i = 0; i < nodeChildrenArr.length; i++) {
+                const index = this.selectedDeps.indexOf(nodeChildrenArr[i]);
+                if (index != -1) this.selectedDeps.splice(index, 1);
+            }
+            
         }
     }
 

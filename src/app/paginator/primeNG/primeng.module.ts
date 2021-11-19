@@ -5,7 +5,7 @@ import {InputTextModule} from 'primeng/inputtext';
 import {ButtonModule} from 'primeng/button';
 import {TableModule} from 'primeng/table';
 import {CardModule} from 'primeng/card';
-import {PanelModule} from 'primeng/panel';
+import {PanelModule} from 'primeng/panel'
 import {FieldsetModule} from 'primeng/fieldset';
 import {CheckboxModule} from 'primeng/checkbox';
 import {AccordionModule} from 'primeng/accordion';
