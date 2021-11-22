@@ -9,12 +9,12 @@
             <filtro-usuario-consulta></filtro-usuario-consulta>
             
             <div class="p-d-flex p-jc-center p-mb-4">
-                <p-button (click)="filterAccordion = false" label="Buscar" styleClass="p-button-info"></p-button>
+                <p-button (click)="findUsuarioConsulta()" label="Buscar" styleClass="p-button-info"></p-button>
             </div>
         </p-accordionTab>
     </p-accordion>
 
-    <tabla-usuario-consulta></tabla-usuario-consulta>
+    <tabla-usuario-consulta #tablaUsuarioConsulta></tabla-usuario-consulta>
 
     <div class="p-mt-4">
         <button pButton pRipple type="button" label="Exportar selección" class="p-button-success"></button>

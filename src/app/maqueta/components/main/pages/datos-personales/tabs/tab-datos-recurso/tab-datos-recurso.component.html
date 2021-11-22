@@ -9,14 +9,14 @@
             <filtro-datos-recurso></filtro-datos-recurso>
 
             <div class="p-d-flex p-jc-center botonBuscar">
-                <p-button (click)="filterAccordion = false" type="button" label="Buscar" styleClass="p-button-info"></p-button>
+                <p-button (click)="findDatosRecursos()" type="button" label="Buscar" styleClass="p-button-info"></p-button>
             </div>
 
         </p-accordionTab>
     </p-accordion>
 
 
-    <tabla-datos-recurso></tabla-datos-recurso>
+    <tabla-datos-recurso #tablaDatosRecursos></tabla-datos-recurso>
     
     <div class="p-mt-4">
         <button pButton pRipple type="button" label="Exportar selección" class="p-button-success"></button>

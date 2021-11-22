@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { TablaDatosRecursoComponent } from './components/tabla-datos-recurso/tabla-datos-recurso.component';
 
 @Component({
     selector: 'tab-datos-recurso',
@@ -7,6 +8,18 @@ import { Component } from '@angular/core';
 })
 export class TabDatosRecursoComponent {
 
+    @ViewChild('tablaDatosRecursos') tablaDatosRecursos: TablaDatosRecursoComponent | undefined;
+
     filterAccordion: boolean = true;
+
+    findDatosRecursos() {
+        this.filterAccordion = false;
+        if (!this.tablaDatosRecursos) return;
+        this.tablaDatosRecursos.loading = true;
+        setTimeout(() => {
+            if (!this.tablaDatosRecursos) return;
+            this.tablaDatosRecursos.loading = false;
+        }, 2000);
+    }
 
 }
