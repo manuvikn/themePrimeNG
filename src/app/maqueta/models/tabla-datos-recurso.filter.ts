@@ -14,8 +14,6 @@ export class TablaDatosRecursoFilter {
     public sortField: string | null = null;
     public sortOrder: number | null = null;
     
-    constructor() {}
-
     convertToDatosRecursoFilter(data: any) {
 
         this.filters = data.filters ? data.filters : null;

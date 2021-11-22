@@ -1,7 +1,7 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
-import { LazyLoadEvent } from "primeng/api";
-import { TablaDatosRecursoFilter } from "src/app/maqueta/models/tabla-datos-recurso.filter";
-import { TablaDatosRecursoService } from "../../services/tabla-datos-recurso.service";
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { LazyLoadEvent } from 'primeng/api';
+import { TablaDatosRecursoFilter } from 'src/app/maqueta/models/tabla-datos-recurso.filter';
+import { TablaDatosRecursoService } from '../../services/tabla-datos-recurso.service';
 
 @Component({
     selector: 'tabla-datos-recurso',

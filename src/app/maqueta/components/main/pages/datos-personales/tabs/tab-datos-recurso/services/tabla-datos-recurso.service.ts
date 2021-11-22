@@ -1,7 +1,7 @@
-import { HttpClient } from "@angular/common/http";
-import { Injectable } from "@angular/core";
-import { map } from "rxjs/operators";
-import { TablaDatosRecursoFilter } from "src/app/maqueta/models/tabla-datos-recurso.filter";
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { map } from 'rxjs/operators';
+import { TablaDatosRecursoFilter } from 'src/app/maqueta/models/tabla-datos-recurso.filter';
 
 @Injectable({
     providedIn: 'root'
@@ -15,7 +15,7 @@ export class TablaDatosRecursoService {
         return this.http.get('/assets/data/datosRecurso.json')
             .pipe(
                 map(async (data:any) => {
-                    let response: any = {};
+                    const response: any = {};
                     data = await this.filterData(data, filter);
                     response['totalRecords'] = data.length;
                     data = await this.sortData(data, filter);
@@ -23,7 +23,7 @@ export class TablaDatosRecursoService {
                     response['data'] = data;
                     return response;
                 })
-            )
+            );
 
     }
 
@@ -73,7 +73,7 @@ export class TablaDatosRecursoService {
 
             for (let i = 0; i < filterKeys.length; i++) {
 
-                let filterObjValue = filterObj[filterKeys[i]].value;
+                const filterObjValue = filterObj[filterKeys[i]].value;
                 if (filterObjValue && !itemData[filterKeys[i]].toLowerCase().includes(filterObjValue.toLowerCase())) {
                     itemFiltered = false;
                 }

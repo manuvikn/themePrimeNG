@@ -71,37 +71,7 @@ export class FiltroUsuarioConsultaComponent implements OnInit {
         
     }
 
-    searchDep(inputDep: string) {
-        
-        /* if (this.depNodes != []) {
-            inputDep = inputDep.toLowerCase().trim();
-            
-            this.newDepartamentos = [];
-            this.depNodes.forEach((item: any) => {
-                
-                const label = item['label'].toLowerCase().trim();
-                if (label.includes(inputDep)) {
-                    this.newDepartamentos.push({...item});
-                } else {
-                    let breakLoop = false;
-                    let count = 0;
-                    while (!breakLoop && count < item['children'].length) {
-                        
-                        const subDep = item.children[count];
-                        
-                        const labelChil = subDep['label'].toLowerCase().trim();
-                        if (labelChil.includes(inputDep)) {
-                            
-                            this.newDepartamentos.push({...item});
-                            this.newDepartamentos[this.newDepartamentos.length - 1].expanded = true;
-                            breakLoop = true;
-                        }
-                        count ++;
-                    }
-                }
-            });
-
-        } */
+    /* searchDep(inputDep: string) {
 
         if (this.depNodes != []) {
             inputDep = inputDep.toLowerCase().trim();
@@ -128,15 +98,52 @@ export class FiltroUsuarioConsultaComponent implements OnInit {
                         }
                         count ++;
                     }
+                    
                 }
             });
 
         }
+    } */
+
+    searchDep(inputDep: string) {
+
+        this.newDepartamentos = [];
+
+        inputDep = inputDep.toLowerCase().trim();
+
+        for (let i = 0; i < this.depNodes.length; i++) {
+            this.recursiveSearch(this.depNodes[i], inputDep, this.depNodes[i], undefined);
+        }
+
+
     }
 
-    unSelectNode(event: any): any {
+    recursiveSearch(nodeElement: TreeNode, inputDep: string, parent:TreeNode, parentNode: TreeNode | undefined) {
+
+        const label = nodeElement['label']?.toLowerCase().trim();
+       
+        if (label?.includes(inputDep)) {
+            nodeElement.expanded = true;
+            parent.expanded = true;
+
+            if (this.newDepartamentos.indexOf(parent) === -1) {
+                this.newDepartamentos.push(parent);
+            }
+            if (parentNode) parentNode['expanded'] = true;
+            
+        }
         
-        if (!event.node?.children || !this.selectedDeps) return;        
+        if (nodeElement['children']) {
+            for (let i = 0; i < nodeElement['children'].length; i++) {
+                this.recursiveSearch(nodeElement['children'][i], inputDep, parent, nodeElement);
+            }
+        }
+
+    }
+
+    /* unSelectNode(event: any): any {
+        
+        if (!event.node?.children || !this.selectedDeps) return;   
 
         const nodeChildrenArr = event.node.children;
         const allNodes: TreeNode[] = [];
@@ -161,6 +168,39 @@ export class FiltroUsuarioConsultaComponent implements OnInit {
             }
             
         }
+    } */
+
+    unSelectNode(nodeElement: TreeNode): void {
+
+        if (nodeElement['children'] !== undefined) {
+            this.selectedDeps?.push(nodeElement);
+            let allSelect = true; 
+
+            for (let i = 0; i < nodeElement['children'].length; i++) {
+                if (this.selectedDeps?.indexOf(nodeElement['children'][i]) === -1) {
+                    allSelect = false;
+                    i = nodeElement['children'].length;
+                }
+            }
+            
+            this.recursiveSelect(nodeElement, allSelect);
+        
+        }
+    }
+
+    recursiveSelect(nodeElement: TreeNode, unselectAll: boolean) {
+        if (!this.selectedDeps) return;
+        
+        const index = this.selectedDeps.indexOf(nodeElement);
+        if (unselectAll && index !== -1) this.selectedDeps.splice(index, 1);
+        else if (!unselectAll && index === -1) this.selectedDeps.push(nodeElement);
+
+        if (nodeElement['children']) {
+            for (let i = 0; i < nodeElement['children'].length; i++) {
+                this.recursiveSelect(nodeElement['children'][i], unselectAll);
+            }
+        }
+
     }
 
 }

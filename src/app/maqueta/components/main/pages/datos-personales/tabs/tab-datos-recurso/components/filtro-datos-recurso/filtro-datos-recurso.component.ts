@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
 @Component({
     selector: 'filtro-datos-recurso',
@@ -13,7 +13,6 @@ export class FiltroDatosRecursoComponent implements OnInit{
     checkAplicacionesSelect: Array<any> = [];
     checkAplicaciones: Array<any> = [];
 
-    constructor() {}
 
     ngOnInit() {
 
@@ -24,10 +23,10 @@ export class FiltroDatosRecursoComponent implements OnInit{
 
     loadTiposRecursos() {
         for (let i = 0; i < 8; i++) {
-            let recurso = {
+            const recurso = {
                 name: `Aplciaciones del Portal Prosa de la Intranet ${i + 1}`,
                 code: `recurso${i+1}`
-            }
+            };
             this.tiposRecursos.push(recurso);
         }
 
@@ -40,7 +39,7 @@ export class FiltroDatosRecursoComponent implements OnInit{
             this.checkAplicaciones.push({
                 code: `value${i+1}`,
                 name: `Aplicacion ${i+1}`
-            })
+            });
         }
 
     }

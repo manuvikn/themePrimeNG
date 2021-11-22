@@ -10,11 +10,71 @@
                     "label": "Departamento 1",
                     "data": "Dep1-1",
                     "expandedIcon": "pi pi-folder-open",
-                    "collapsedIcon": "pi pi-folder"
+                    "collapsedIcon": "pi pi-folder",
+                    "children": [{
+                            "label": "valor aa",
+                            "data": "valor-aa",
+                            "expandedIcon": "pi pi-folder-open",
+                            "collapsedIcon": "pi pi-folder"
+                        },
+                        {
+                            "label": "valor ab",
+                            "data": "valor-ab",
+                            "expandedIcon": "pi pi-folder-open",
+                            "collapsedIcon": "pi pi-folder"
+                        },
+                        {
+                            "label": "valor ac",
+                            "data": "valor-ac",
+                            "expandedIcon": "pi pi-folder-open",
+                            "collapsedIcon": "pi pi-folder"
+                        },
+                        {
+                            "label": "valor ad",
+                            "data": "valor-ad",
+                            "expandedIcon": "pi pi-folder-open",
+                            "collapsedIcon": "pi pi-folder"
+                        },
+                        {
+                            "label": "valor ae",
+                            "data": "valor-ae",
+                            "expandedIcon": "pi pi-folder-open",
+                            "collapsedIcon": "pi pi-folder"
+                        },
+                        {
+                            "label": "valor af",
+                            "data": "valor-af",
+                            "expandedIcon": "pi pi-folder-open",
+                            "collapsedIcon": "pi pi-folder"
+                        }]
                 },
                 {
                     "label": "Departamento 2",
                     "data": "Dep1-2",
+                    "expandedIcon": "pi pi-folder-open",
+                    "collapsedIcon": "pi pi-folder"
+                },
+                {
+                    "label": "valor a",
+                    "data": "valor-a",
+                    "expandedIcon": "pi pi-folder-open",
+                    "collapsedIcon": "pi pi-folder"
+                },
+                {
+                    "label": "valor b",
+                    "data": "valor-b",
+                    "expandedIcon": "pi pi-folder-open",
+                    "collapsedIcon": "pi pi-folder"
+                },
+                {
+                    "label": "valor c",
+                    "data": "valor-c",
+                    "expandedIcon": "pi pi-folder-open",
+                    "collapsedIcon": "pi pi-folder"
+                },
+                {
+                    "label": "valor d",
+                    "data": "valor-d",
                     "expandedIcon": "pi pi-folder-open",
                     "collapsedIcon": "pi pi-folder"
                 }]
@@ -69,6 +129,24 @@
                 {
                     "label": "Departamento 8",
                     "data": "Dep4-2",
+                    "expandedIcon": "pi pi-folder-open",
+                    "collapsedIcon": "pi pi-folder"
+                }]
+        },
+        {
+            "label": "valor e",
+            "data": "valor-e",
+            "expandedIcon": "pi pi-folder-open",
+            "collapsedIcon": "pi pi-folder",
+            "children": [{
+                    "label": "valor f",
+                    "data": "valor-f",
+                    "expandedIcon": "pi pi-folder-open",
+                    "collapsedIcon": "pi pi-folder"
+                },
+                {
+                    "label": "vlaor g",
+                    "data": "valor-g",
                     "expandedIcon": "pi pi-folder-open",
                     "collapsedIcon": "pi pi-folder"
                 }]
